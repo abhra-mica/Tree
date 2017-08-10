@@ -1,5 +1,3 @@
-package Tree;
-
 import java.util.Stack;
 import Tree.BinaryTree.Node;
 
