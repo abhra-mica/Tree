@@ -1,11 +1,7 @@
-package Tree;
-
 import java.util.Stack;
-
 import Tree.BinaryTree.Node;
 
 public class PrintRootToLeafPaths {
-
 	public static void main(String[] args) {
 		BinaryTree tree = new BinaryTree();
 		tree.addBSTItr(50);
@@ -17,14 +13,11 @@ public class PrintRootToLeafPaths {
 		tree.addBSTItr(80);
 		tree.addBSTItr(1);
 		printPaths(tree.root, new Stack<Integer>());
-
 	}
 
 	static void printPaths(Node node, Stack<Integer> stack) {
-
 		if (node == null)
 			return;
-
 		stack.push(node.data);
 		printPaths(node.leftChild, stack);
 
@@ -38,7 +31,5 @@ public class PrintRootToLeafPaths {
 		printPaths(node.rightChild, stack);
 		stack.pop();
 		System.out.println();
-
 	}
-
 }
