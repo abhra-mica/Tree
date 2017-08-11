@@ -1,9 +1,5 @@
-package Tree;
-
 import Tree.BinaryTree.Node;
-
 public class LCA_BT {
-
 	public static void main(String[] args) {
 		BinaryTree tree = new BinaryTree();
 		tree.addBSTItr(10);
@@ -16,20 +12,14 @@ public class LCA_BT {
 		tree.addBSTItr(60);
 		tree.addBSTItr(28);
 		tree.addBSTItr(78);
-
 		System.out.println(lca(tree.root, 6, 9));
-
 	}
 
 	static int lca(Node node, int n1, int n2) {
-
 		if (node.data > Math.max(n1, n2))
 			return lca(node.leftChild, n1, n2);
-
 		if (node.data < Math.min(n1, n2))
 			return lca(node.rightChild, n1, n2);
-
 		return node.data;
 	}
-
 }
