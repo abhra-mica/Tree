@@ -1,5 +1,5 @@
 import Tree.BinaryTree.Node;
-public class LCA_BT {
+public class LCA_BST {
 	public static void main(String[] args) {
 		BinaryTree tree = new BinaryTree();
 		tree.addBSTItr(10);
