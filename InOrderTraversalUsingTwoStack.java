@@ -1,7 +1,5 @@
-package Tree;
 
 import java.util.Stack;
-
 import Tree.BinaryTree.Node;
 
 public class InOrderTraversalUsingTwoStack {
@@ -21,8 +19,7 @@ public class InOrderTraversalUsingTwoStack {
 
 	static void inOrderTraverse(Node node) {
 		Stack<Node> stack1 = new Stack<>(); // Hold nodes for traversing
-		Stack<Integer> stack2 = new Stack<>(); // Hold integer values in
-												// in-order format
+		Stack<Integer> stack2 = new Stack<>(); // Hold integer values in in-order format
 
 		while (true) {
 			// Below while loops traverse until nodes left child reaches to null
