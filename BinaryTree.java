@@ -166,5 +166,18 @@ public class BinaryTree {
 		}
 		return false;
 	}
+	
+	// Diameter of a binary tree
+	static int diameter(Node node) {
+		if (node == null)
+			return 0;
+		int lHeight = BinaryTree.height(node.leftChild);
+		int rHeight = BinaryTree.height(node.rightChild);
+
+		int lDiameter = diameter(node.leftChild);
+		int rDiameter = diameter(node.rightChild);
+		int fd = max(lHeight + rHeight + 1, max(lDiameter, rDiameter));
+		return fd;
+	}
 
 }
