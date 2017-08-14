@@ -1,8 +1,5 @@
-package Tree;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import Tree.BinaryTree.Node;
 
 public class RootToLeafSum {
@@ -19,10 +16,8 @@ public class RootToLeafSum {
 		tree.addBSTItr(9);
 
 		int sum = 37;
-
 		rootToLeafSum(tree.root, sum, result);
 		System.out.println(result);
-
 	}
 
 	public static boolean rootToLeafSum(Node root, int sum, List<Integer> result) {
