@@ -1,5 +1,3 @@
-package Tree;
-
 import Tree.BinaryTree.Node;
 
 public class IsBTaBST {
@@ -12,7 +10,6 @@ public class IsBTaBST {
 		tree.addBSTItr(11);
 		tree.addBSTItr(13);
 		tree.addBSTItr(9);
-
 		System.out.println(isBST(tree.root, Integer.MIN_VALUE,
 				Integer.MAX_VALUE));
 	}
@@ -22,7 +19,6 @@ public class IsBTaBST {
 			return true;
 		if (node.data <= min || node.data > max)
 			return false;
-
 		return isBST(node.leftChild, min, node.data)
 				&& isBST(node.rightChild, node.data, max);
 	}
