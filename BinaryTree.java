@@ -1,12 +1,12 @@
 package Tree;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class BinaryTree {
-
+//Root node of Binary Tree
 	public Node root;
-
+	
+	//Inner class that represent node structure
 	class Node {
 		Node leftChild;
 		Node rightChild;
@@ -22,7 +22,6 @@ public class BinaryTree {
 	}
 
 	// 1>Add childs in a BST in iterative way
-
 	public void addBSTItr(int data) {
 		Node newNode = new Node(data);
 		if (root == null) {
@@ -51,7 +50,6 @@ public class BinaryTree {
 	}
 
 	/* 3>In Order traversal */
-
 	public void inOrderTravarse(Node focusNode) {
 		if (root == null)
 			System.out.println("Empty Tree");
@@ -83,7 +81,7 @@ public class BinaryTree {
 	}
 
 	/*
-	 * 6>Method to print height of a tree, here we are considering number or
+	 * 6>Method to print height of a tree, here we are considering number of
 	 * edges that's why we are returning -1 within base condition if we consider
 	 * nodes as the height of a tree then we can return 0 within base condition.
 	 */
@@ -98,7 +96,7 @@ public class BinaryTree {
 	}
 
 	/*
-	 * 7>Method to decide maximum between two numbers,it can act as a helping
+	 * Method to decide maximum between two numbers,it can act as a helping
 	 * method in height method defined above.
 	 */
 	int max(int lHeight, int rHeight) {
@@ -108,7 +106,7 @@ public class BinaryTree {
 			return rHeight;
 	}
 
-	/* 8> Method to traverse Tree through level order means Breadth First Search */
+	/* 7> Method to traverse Tree through level order means Breadth First Search */
 	public void levelOrderTraversal(Node node) {
 		Queue<Node> queue = new LinkedList<>();
 
@@ -130,7 +128,7 @@ public class BinaryTree {
 	}
 
 	/*
-	 * 9> Search an element in a BT in Non Recursive way. We follow the similar
+	 * 8> Search an element in a BT in Non Recursive way. We follow the similar
 	 * process what we follow in levelOrderTraversal.Using a queue to store and
 	 * check.
 	 */
@@ -152,14 +150,14 @@ public class BinaryTree {
 	}
 
 	/*
-	 * 10>Search an element in a BT in Recursive way.We follow the in order
+	 * 9>Search an element in a BT in Recursive way.We follow the in order
 	 * traversal,We can follow others also like pre order, post order etc.
 	 */
 
 	boolean findNodeWithRec(Node node, int data) {
 		if (node != null) {
 			if (node.data == data)
-				return false;
+				return true;
 			else
 				return findNodeWithRec(node.leftChild, data)
 						|| findNodeWithRec(node.rightChild, data);
@@ -167,8 +165,8 @@ public class BinaryTree {
 		return false;
 	}
 	
-	// Diameter of a binary tree
-	static int diameter(Node node) {
+	//10> Diameter of a binary tree
+	public static int diameter(Node node) {
 		if (node == null)
 			return 0;
 		int lHeight = BinaryTree.height(node.leftChild);
