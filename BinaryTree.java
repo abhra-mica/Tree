@@ -49,6 +49,27 @@ public class BinaryTree {
 		}
 	}
 
+	// 2> Add child in BST in recursive way
+	public void addRecursive(int data) {
+		Node node = root;
+		addRecSup(node, data);
+	}
+
+	public void addRecSup(Node node, int data) {
+		if (node == null)
+			return;
+		if (data > node.data) {
+			addRecSup(node.rightChild, data);
+			if (node.rightChild == null)// check from recursive call,otherwise we will get stale data
+				node.rightChild = new Node(data);
+		}
+		if (data < node.data) {
+			addRecSup(node.leftChild, data);
+			if (node.leftChild == null)// check from recursive call,otherwise we will get stale datas
+				node.leftChild = new Node(data);
+		}
+	}
+
 	/* 3>In Order traversal */
 	public void inOrderTravarse(Node focusNode) {
 		if (root == null)
