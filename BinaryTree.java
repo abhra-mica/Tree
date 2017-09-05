@@ -94,6 +94,8 @@ public class BinaryTree {
 
 	/* 5> Post Order Traversal */
 	public void postOrderTraverse(Node focusNode) {
+		if (root == null)
+			System.out.println("Empty Tree");
 		if (focusNode != null) {
 			postOrderTraverse(focusNode.leftChild);
 			postOrderTraverse(focusNode.rightChild);
@@ -186,7 +188,7 @@ public class BinaryTree {
 		return false;
 	}
 	
-	//10> Diameter of a binary tree
+	//10> Diameter of a binary tree[Calculating diameter based on highest no. of nodes in a path]
 	public static int diameter(Node node) {
 		if (node == null)
 			return 0;
