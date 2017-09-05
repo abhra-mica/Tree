@@ -1,10 +1,8 @@
 package Tree;
-
 import Tree.BinaryTree.Node;
 
 public class MirrorImage {
 	public static void main(String[] args) {
-
 		BinaryTree tree = new BinaryTree();
 		tree.addBSTItr(50);
 		tree.addBSTItr(30);
@@ -22,7 +20,7 @@ public class MirrorImage {
 		tree.inOrderTravarse(tree.root);
 	}
 
-	static void mirrorImage(Node root) {
+	public static void mirrorImage(Node root) {
 
 		if (root != null) {
 			mirrorImage(root.leftChild);
