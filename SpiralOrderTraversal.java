@@ -4,7 +4,6 @@ import Tree.BinaryTree.Node;
 public class SpiralOrderTraversal {
 
 	public static void main(String[] args) {
-
 		BinaryTree tree = new BinaryTree();
 		tree.addBSTItr(50);
 		tree.addBSTItr(30);
