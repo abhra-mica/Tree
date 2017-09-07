@@ -17,7 +17,7 @@ public class InOrderTraversalUsingTwoStack {
 		inOrderTraverse(tree.root);
 	}
 
-	static void inOrderTraverse(Node node) {
+	public static void inOrderTraverse(Node node) {
 		Stack<Node> stack1 = new Stack<>(); // Hold nodes for traversing
 		Stack<Integer> stack2 = new Stack<>(); // Hold integer values in in-order format
 
