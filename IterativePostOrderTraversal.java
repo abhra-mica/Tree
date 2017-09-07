@@ -17,7 +17,7 @@ public class IterativePostOrderTraversal {
 		postTraversal(tree.root);
 	}
 
-	static void postTraversal(Node node) {
+	public static void postTraversal(Node node) {
 		Stack<Node> stack1 = new Stack<>();
 		Stack<Integer> stack2 = new Stack<>();
 
