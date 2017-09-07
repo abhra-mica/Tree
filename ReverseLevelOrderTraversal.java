@@ -1,14 +1,11 @@
 package Tree;
-
 import java.util.LinkedList;
 import java.util.Stack;
-
 import Tree.BinaryTree.Node;
 
 public class ReverseLevelOrderTraversal {
 
 	public static void main(String[] args) {
-
 		BinaryTree tree = new BinaryTree();
 		tree.addBSTItr(50);
 		tree.addBSTItr(30);
