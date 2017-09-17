@@ -1,5 +1,4 @@
 package Tree;
-
 import Tree.BinaryTree.Node;
 
 public class Identical {
