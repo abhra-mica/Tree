@@ -200,5 +200,13 @@ public class BinaryTree {
 		int fd = max(lHeight + rHeight + 1, max(lDiameter, rDiameter));
 		return fd;
 	}
+		/* 11>Sum of all nodes */
+	 public static int sumAllNodes(Node node) {
+		if (node == null)
+			return 0;
+		int sum = node.data + sumAllNodes(node.leftChild)
+				+ sumAllNodes(node.rightChild);
+		return sum;
+	}
 
 }
