@@ -132,7 +132,6 @@ public class BinaryTree {
 	/* 7> Method to traverse Tree through level order means Breadth First Search */
 	public void levelOrderTraversal(Node node) {
 		Queue<Node> queue = new LinkedList<>();
-
 		if (root == null) {
 			System.out.println("Empty String");
 			return;
@@ -150,26 +149,26 @@ public class BinaryTree {
 		}
 	}
 
-	/*
+		/*
 	 * 8> Search an element in a BT in Non Recursive way. We follow the similar
 	 * process what we follow in levelOrderTraversal.Using a queue to store and
-	 * check.
+	 * check. It returns the required node.If not find return NULL.
 	 */
 
-	boolean findNodeWithoutRec(Node node, int data) {
+	public static Node findNodeWithoutRec(Node node, int data) {
 		Queue<Node> queue = new LinkedList();
 		queue.add(node);
 
 		while (!queue.isEmpty()) {
 			Node temp = queue.poll();
 			if (temp.data == data)
-				return true;
+				return temp;
 			if (temp.leftChild != null)
 				queue.add(temp.leftChild);
 			if (temp.rightChild != null)
 				queue.add(temp.rightChild);
 		}
-		return false;
+		return null;
 	}
 
 	/*
