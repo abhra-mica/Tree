@@ -104,7 +104,8 @@ public class BinaryTree {
 	}
 
 	/*
-	 * 6>Method to print height of a tree, here we are considering number of
+	 *Height of a tree:Longest path from root to leaf node.
+	 *6>Method to print height of a tree, here we are considering number of
 	 * edges that's why we are returning -1 within base condition if we consider
 	 * nodes as the height of a tree then we can return 0 within base condition.
 	 */
