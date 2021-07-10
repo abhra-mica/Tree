@@ -115,19 +115,8 @@ public class BinaryTree {
 		} else {
 			int lHeight = height(focusNode.leftChild);
 			int rHeight = height(focusNode.rightChild);
-			return max(lHeight, rHeight) + 1;
+			return Math.max(lHeight, rHeight) + 1;
 		}
-	}
-
-	/*
-	 * Method to decide maximum between two numbers,it can act as a helping
-	 * method in height method defined above.
-	 */
-	int max(int lHeight, int rHeight) {
-		if (lHeight > rHeight)
-			return lHeight;
-		else
-			return rHeight;
 	}
 
 	/* 7> Method to traverse Tree through level order means Breadth First Search */
@@ -156,18 +145,17 @@ public class BinaryTree {
 	 * check. It returns the required node.If not find return NULL.
 	 */
 
-	public static Node findNodeWithoutRec(Node node, int data) {
-		Queue<Node> queue = new LinkedList();
-		queue.add(node);
-
-		while (!queue.isEmpty()) {
-			Node temp = queue.poll();
-			if (temp.data == data)
-				return temp;
-			if (temp.leftChild != null)
-				queue.add(temp.leftChild);
-			if (temp.rightChild != null)
-				queue.add(temp.rightChild);
+	public Node findNodeWithoutRec(int data) {
+	  Queue<Node> queue = new LinkedList();
+	  queue.add(root);
+	     while (!queue.isEmpty()) {
+		Node temp = queue.poll();
+		  if (temp.data == data)
+			return temp;
+		  if (temp.leftChild != null)
+			queue.add(temp.leftChild);
+		  if (temp.rightChild != null)
+			queue.add(temp.rightChild);
 		}
 		return null;
 	}
@@ -197,7 +185,7 @@ public class BinaryTree {
 
 		int lDiameter = diameter(node.leftChild);
 		int rDiameter = diameter(node.rightChild);
-		int fd = max(lHeight + rHeight + 1, max(lDiameter, rDiameter));
+		int fd = Math.max(lHeight + rHeight + 1, Math.max(lDiameter, rDiameter));
 		return fd;
 	}
 		/* 11>Sum of all nodes */
